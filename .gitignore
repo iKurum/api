@@ -3,8 +3,6 @@
 /node_modules
 /build
 
-*.sh
-example
 /email
 
 # Logs

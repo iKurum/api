@@ -17,7 +17,7 @@ export class AppService {
     const event = request.headers['x-github-event']; //输出为：事件名称(push)
 
     if (event === 'push' && verify_signature(request)) {
-      run_cmd('sh', ['./github.sh'], function (res) {
+      run_cmd('sh', ['./github.sh', rep.name], function (res) {
         // res返回的是shell命令操作后在命令行终端显示的字符串，这里是一些git操作的提示
         Logger.log(res);
       });
